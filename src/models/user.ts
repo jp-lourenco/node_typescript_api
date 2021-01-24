@@ -1,5 +1,4 @@
 import mongoose, { Document, Model } from 'mongoose';
-import bcrypt from 'bcrypt';
 import AuthService from '@src/services/auth';
 import logger from '@src/logger';
 export interface User {

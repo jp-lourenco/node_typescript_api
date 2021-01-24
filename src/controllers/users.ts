@@ -3,7 +3,6 @@ import { Request, Response } from 'express';
 import { User } from '@src/models/user';
 import { BaseController } from './index';
 import AuthService from '@src/services/auth';
-import apiError from '@src/util/errors/api-error';
 import { authMiddleware } from '@src/middlewares/auth';
 
 @Controller('users')
@@ -25,7 +24,7 @@ export class UsersController extends BaseController {
     res: Response
   ): Promise<Response | undefined> {
     const { email, password } = req.body;
-    const user = await User.findOne({ email: req.body.email });
+    const user = await User.findOne({ email: email });
     if (!user) {
       return this.sendErrorResponse(res, {
         code: 401,
