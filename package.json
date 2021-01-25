@@ -7,7 +7,7 @@
     "build": "tsc",
     "start": "yarn build && node dist/src/index.js",
     "start:dev": "ts-node-dev src/index.ts | pino-pretty -c",
-    "test": "yarn style:check && yarn test:unit && yarn test:functional",
+    "test": "yarn test:unit && yarn test:functional",
     "test:functional": "jest --projects ./test --runInBand",
     "test:unit": "jest",
     "lint": "eslint ./src/ ./test --ext .ts",
@@ -39,6 +39,7 @@
     "@types/multer": "^1.4.5",
     "@types/nock": "^11.1.0",
     "@types/node": "^14.14.20",
+    "@types/node-cache": "^4.2.5",
     "@types/pino": "^6.3.5",
     "@types/supertest": "^2.0.10",
     "@types/swagger-ui-express": "^4.1.2",
@@ -71,6 +72,7 @@
     "module-alias": "^2.2.2",
     "moment": "^2.29.1",
     "mongoose": "^5.10.19",
+    "node-cache": "^5.1.2",
     "pino": "^6.11.0",
     "swagger-ui-express": "^4.1.6"
   }
